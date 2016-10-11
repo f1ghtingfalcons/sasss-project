@@ -1,0 +1,48 @@
+@import "../../../pallete"
+
+.nav-button
+    cursor: pointer
+    color: $primary-text
+    padding: 8px 32px
+    letter-spacing: .010em
+    border-radius: 3px
+    box-sizing: border-box
+    user-select: none
+    position: relative
+    border: 0
+    outline: none
+    display: inline-block
+    align-items: center
+    margin: 6px 8px
+    line-height: 36px
+    min-height: 36px
+    background: 0 0
+    white-space: nowrap
+    min-width: 88px
+    text-align: center
+    text-transform: uppercase
+    font-weight: 500
+    font-style: inherit
+    font-variant: inherit
+    font-family: inherit
+    overflow: hidden
+    transition: box-shadow .4s cubic-bezier(.25,.8,.25,1),background-color .4s cubic-bezier(.25,.8,.25,1)
+    &:hover:after
+        visibility: visible
+        transform: scaleX(1)
+    &:after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 2px
+        bottom: 8px
+        left: 0
+        background-color: $dark-primary
+        visibility: hidden
+        transform: scaleX(0)
+        transition: all .2s ease-in-out 0s
+
+.active
+    &:after
+        transform: scaleX(1)
+        visibility: visible

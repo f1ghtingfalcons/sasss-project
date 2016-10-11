@@ -1,0 +1,75 @@
+@import "../../pallete"
+
+.banner
+    position: relative
+    padding: 64px
+    height: 600px
+    min-height: 600px
+    overflow: hidden
+    z-index: 1
+    background-color: $primary
+    background-image: url(/assets/images/snow.png),url(/assets/images/snow3.png),url(/assets/images/snow2.png)
+    -webkit-animation: snow 20s linear infinite
+    animation: snow 20s linear infinite
+
+/* Snow Keyframes*/
+@keyframes snow
+    0%
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    100%
+        background-position: 500px 1000px, 400px 400px, 300px 300px
+
+.name
+    position: relatives
+    font-size: 7em
+    color: $primary-text
+    z-index: 3
+    text-align: center
+
+.description
+    position: relative
+    padding: 16px
+    z-index: 3
+
+.big-mountain
+    position: absolute
+    height: 90%
+    left: 50%
+    z-index: 2
+    bottom: -20%
+    transform: translate(-50%,0)
+    transition: all 1s ease-in-out
+    @media (max-width: $break-sm)
+        height: 100%
+        bottom: -30%
+
+.medium-mountain 
+    position: absolute
+    height: 70%
+    left: 30%
+    z-index: 2
+    bottom: -20%
+    transform: translate(-50%,0)
+    transition: all 1s
+    @media (min-width: $break-lg)
+        left: 40%
+
+.small-mountain
+    position: absolute
+    height: 50%
+    left: 70%
+    z-index: 2
+    bottom: -20%
+    transform: translate(-50%,0)
+    transition: all 1s
+    @media (min-width: $break-lg) 
+        left: 60%
+
+.small-square
+    content: ''
+    display: block
+    background: $accent-color
+    margin: 8px
+    width: 5px
+    height: 5px
+    border-radius: 1px

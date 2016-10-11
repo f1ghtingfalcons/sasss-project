@@ -1,0 +1,8 @@
+<nav class="level medium-bar">
+    <div class="level-left">
+        <img class="site-icon" src="assets/icons/t_icon.svg" alt="icon">
+    </div>
+    <div class="level-right">
+        <app-nav-button *ngFor="let page of pages" [title]="page" [selected]="selectedPage === page" (click)="onSelect(page)"></app-nav-button>
+    </div>
+</nav>

@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NavButtonComponent } from './navbar/nav-button/nav-button.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    NavButtonComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,188 @@
-<h1>
-  {{title}}
-</h1>
+<app-navbar></app-navbar>
+<app-banner></app-banner>
+
+<div class="container" id="about-me">
+    <h2 class="section-header">About Me</h2>
+    <p class="about-section">
+        I am an engineer and a designer from Colorado. I seek to use technology to design solutions to complex problems.
+        I have worked on problems from optics to unmaned aerial systems to prototype consumer products. I have also worked
+        as a software engineer designing data transformation and harvesting systems, ontologies, and even websites. 
+    </p>
+    <button class="download-button">Download Resume</button>
+</div>
+
+<div class="design-section dark">
+    <h2 class="section-header" id="projects">Hardware Design</h2>
+    <div class="product-design">
+        <div class="lg-round" style="background:url(assets/images/iris.jpg); background-size: cover; background-position-x: -42px;"></div>
+        <div class="about-paragraph">
+            <h2>Drone Tracking for Dual-Comb Laser Spectroscopy</h2>
+            <p>
+                In a joint project between the National Institute of Standards and Technology (NIST), the Defense Advanced Research Projects Agency (DARPA),
+                and the University of Colorado I was part of a small team of graduate students developing a system to track an Unmaned Aerial System (UAS)
+                with high precision at long range. The point of doing so was to bounce a laser beam back to its source so that it could be used to determine the 
+                composition of gases in a remote area. 
+            </p>
+            <p>
+                The team had to design a tracking system that was capable of high precision in real time and integrate that tracking system with a ground based
+                2-axis gimbal that would perform the pointing of the laser. We implemented real time coordinate transformations and wrote in between translation
+                software to coordinate the different systems. Quick integration and testing was crucial for this project as our time was limited to the duration of
+                the school year. 
+            </p>
+        </div>
+    </div>
+    <div class="product-design" >
+        <div class="lg-round" style="background:url(assets/images/fitnx.jpg); background-size: cover; background-position-x: 16px; background-position-y: -110px;"></div>
+        <div class="about-paragraph">
+            <h2>FitNX Fitness Tracker</h2>
+            <p>
+                Development of a consumer fitness cam to assist with proper form in weight lifting excersises. A wireless camera communicated with a user's phone 
+                and would show a delayed video feed of a users current action. In order to determine the commercial viability of this device, my team and I conducted
+                user interviews. Based on these user interviews we were able to iterate on our ideas and designs and create a viable prototype of a product that could
+                potentially be introduced into a consumer market.
+            </p>
+        </div>
+    </div>
+    <div class="product-design">
+        <div class="lg-round" style="background:url(assets/images/resonator.png); background-size: cover; background-position-x: -49px;"></div>
+        <div class="about-paragraph">
+            <h2>Optical Cavity Resonator</h2>
+            <p>Design and testing of an optical cavity resonator. In this experiment a laser beam is reflected back upon itself. Changing the phase diference of the 
+                self intersecting beam allows for the creation of different laser modes. Through this experiment my team learned about stabilizing and optical system
+                (see the metal bricks on the optical breadboard) and we learned how to pick different laser modes out from a 732nm green laser source. Other interesting
+                results that came out of this research project included observations of lens distortion caused by the heating of the lens by the laser. 
+            </p>
+        </div>
+    </div>
+    <div class="product-design">
+        <div class="lg-round" style="background:url(assets/images/wah.png); background-size: cover; background-position-x: -49px;"></div>
+        <div class="about-paragraph">
+            <h2>Electric Guitar Amplifier</h2>
+            <p>
+                Design and implementation of a 'wah' pedal amplifier. 'Wah' pedals are commonly used by guitarists to add flair and effects to their music.
+                The circuit was comprised of transitor, inductor and capacitor elements that would create a bandpass filter. This bandpass filter had a 
+                tuneable resonant peak that could be changed by the guitar player creating the 'wah' effect.
+            </p>
+        </div>
+    </div>
+</div>
+<div>
+    <h2 class="section-header" id="experience">Experience</h2>
+    <div class="product-design">
+        <div>
+            <div>
+                <img style="max-width:400px; padding-top: 103px;" src="assets/images/lasp_logo.png"/>
+            </div>
+            <div>
+                <h2>Laboratory for Atmospheric and Space Physics</h2>
+                <div>
+                    <h3> Software Engineer (2013-Present)</h3>
+                    <ul>
+                        <li>Design of websites including frontend asthetics and backend data management</li>
+                        <li>Creation and maintenance of a semantic web ontology for solar irradiance data</li>
+                        <li>Implementation of semantic and non-semantic data servers</li>
+                        <li>Agile development process using JIRA</li>
+                    </ul>
+                    <h3>Spacecraft Command Controller (2011-2013)</h3>
+                    <ul>
+                        <li>Part of a large team responsible for the health and safety of 3 low earth orbit space craft and the kepler deep space telescope</li>
+                        <li>I served as an instrument lead on a couple different subsystems. I was responsible for delegating reporting and monitoring of my subsystems to other student team members.</li>
+                        <li>Performed real time commanding of space craft to collect scientific data and perform maintenance.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img style="max-width: 400px;" src="assets/images/CU_seal.png"/>
+            </div>
+            <div>
+                <h2>University of Colorado</h2>
+                <div>
+                    <h3> Master of Science - Mechanical Engineering</h3>
+                    <h3> Bachelor of Science - Engineering Physics</h3>
+                    <h3> Minor - Computer Science</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dark">
+    <h2 class="section-header" id="web-design">Web Design</h2>
+    <ul>
+        <li>
+            <div class="projectThumb__info">
+                <h3 class="project-title">Lisird III</h3>
+            </div>
+            <div ng-if="showLisird" class="website-description">
+                <h2>Lisird III</h2>
+                <p>
+                    LISIRD III is the third iteration of a website that provides solar irradiance data to scientists from LASP's
+                    publicly available data. I was involved in a total rewrite of the frontend framework from jQuery into a new 
+                    framework called AngularJS as well as redesigning many of the pages to include modern design features. This was
+                    my first foray into web design and I was helped along the way by Google's material design principles (some of 
+                    which you can see at work in this website). As LISIRD is a public website I invite you to explore Solar Irradiance
+                    data here: <a href="http://lasp.colorado.edu/lisird3/">See this site!</a>
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="projectThumb__info">
+                <h3 class="project-title">WebTcad</h3>
+            </div>
+            <div ng-if="showWebtcad" class="website-description">
+                <h2>WebTcad</h2>
+                <p>
+                    This site designed to give scientist quick access to spacecraft telemetry data through a web interface. Part of this
+                    was writing a plotting library to handle the complexities of spacecraft telemetry and give scientists and operators the 
+                    tools to inspect and analyze the data. To this end we heavily modified the already popular highcharts software based on
+                    user requests and good design principles.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="projectThumb__info">
+                <h3 class="project-title">Role Manager</h3>
+            </div>
+            <div ng-if="showRoleman" class="website-description">
+                <h2>Role Manager</h2>
+                <p>
+                    Some tools that are created are never used, but others are repurposed to create more useful applications. In this case, our
+                    team had designed a tool intended to track employee skill proficiency. After release however the app was largely disregarded and
+                    eventually forgoten. Years later we needed a way to add employees into our internal LDAP server and turned to the origonal design
+                    of our discarded website. The result was an easy to use interface that could allow managers to quickly add and remove users from
+                    computer user groups.
+                </p>
+            </div>
+        </li>
+        <li>
+            <div class="projectThumb__info">
+                <h3 class="project-title">This Site</h3>
+            </div>
+            <div ng-if="showThis" class="website-description">
+                <h2>This Site!</h2>
+                <p>
+                    Using everything that I had learned from my time designing websites at LASP I created this website from scratch. Everything in this site is
+                    designed and implemented using simple HTML, CSS, and Javascript and run on a friendly Heroku server. This site will be updated from time to time 
+                    as I work on new projects and learn new skills. If you want to see the source code for this site, feel free to checkout the repository on 
+                    <a href="https://github.com/f1ghtingfalcons/design-portfolio">github</a>. Feel free to checkout my other code repositories while youre there too.
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div>
+    <div id="contact">
+        <div class="about-pic">
+            <div class="ski-pic" alt="ski pic"></div>
+        </div>
+        <div class="about-paragraph">
+            <h2>Contact Me</h2>
+            <p>
+                When I'm not integrating systems or designing websites I'm usually out enjoying all the things that Colorado has to offer. When the weather 
+                turns sour or I have to stay in I cook, play guitar and watch hockey. If I sound like someone you would like to work for you or you have a 
+                project that you think that I can help you with please feel free to get in contact with me.
+            </p>
+        </div>
+    </div>
+</div>
