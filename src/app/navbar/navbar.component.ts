@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 const PAGES: string[] = [
-    'Hardware',
-    'Software',
-    'Experience',
-    'Contact'
+    'projects',
+    'experience',
+    'about'
 ]
 
 @Component({
@@ -13,8 +12,9 @@ const PAGES: string[] = [
     styleUrls: ['./navbar.component.sass']
 })
 export class NavbarComponent {
-    pages = PAGES;
+    pages: string[] = PAGES;
     selectedPage: string;
+    collapse: boolean = true;
 
     onSelect( page: string): void {
         this.selectedPage = page;

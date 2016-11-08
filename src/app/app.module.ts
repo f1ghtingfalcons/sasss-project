@@ -1,23 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NavButtonComponent } from './navbar/nav-button/nav-button.component';
 import { BannerComponent } from './banner/banner.component';
+import { ProjectsListComponent } from './projects-list/projects-list.component';
+import { ExperienceListComponent } from './experience-list/experience-list.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { MainComponent } from './main/main.component';
+import { SkillCardComponent } from './main/skill-card/skill-card.component';
+import { SkrollDirective } from './shared/skroll.directive';
+import { FooterComponent } from './footer/footer.component';
+
+const routes: Routes = [
+  { path: '', component: MainComponent },
+  { path: 'projects', component: ProjectsListComponent },
+  { path: 'experience', component: ExperienceListComponent },
+  { path: 'about', component: AboutPageComponent }
+];
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    NavButtonComponent,
-    BannerComponent
+    BannerComponent,
+    ProjectsListComponent,
+    ExperienceListComponent,
+    AboutPageComponent,
+    MainComponent,
+    SkillCardComponent,
+    SkrollDirective,
+    FooterComponent
   ],
   imports: [
+    NgbModule.forRoot(),
+    RouterModule.forRoot(routes),
     BrowserModule,
-    FormsModule,
     HttpModule
   ],
   providers: [],

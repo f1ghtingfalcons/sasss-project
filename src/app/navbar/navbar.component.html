@@ -1,8 +1,14 @@
-<nav class="level medium-bar">
-    <div class="level-left">
-        <img class="site-icon" src="assets/icons/t_icon.svg" alt="icon">
-    </div>
-    <div class="level-right">
-        <app-nav-button *ngFor="let page of pages" [title]="page" [selected]="selectedPage === page" (click)="onSelect(page)"></app-nav-button>
+<nav skroll class="navbar navbar-dark navbar-fixed-top" style="background-color: transparent">
+    <button class="navbar-toggler hidden-sm-up" type="button" (click)="collapse=!collapse"></button>
+    <div [ngbCollapse]="collapse" class="navbar-toggleable-xs container">
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img src="assets/icons/t_icon.svg" width="30" height="30" alt="icon">
+            Tyler Traver
+        </a>
+        <ul class="nav navbar-nav float-sm-right">
+            <li class="nav-item" *ngFor="let page of pages">
+                <a class="nav-link nav-button" [ngClass]="{active: selectedPage === page}" [routerLink]="[page]" (click)="onSelect(page)">{{page}}</a>
+            </li>
+        </ul>
     </div>
 </nav>

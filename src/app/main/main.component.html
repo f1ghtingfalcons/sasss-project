@@ -1,0 +1,13 @@
+<div class="container padding">
+    <div class="row flex-items-xs-center">
+        <app-skill-card class="card col-sm-6 text-xs-center" *ngFor="let skill of skills" [image]="skill.image" [title]="skill.title" [description]="skill.description"></app-skill-card>
+    </div>
+    <div class="row flex-items-xs-center">
+        <div class="col-xs-4 text-xs-center">
+            <button class="rounded-btn">See My Projects</button>
+        </div>
+        <div class="col-xs-4 text-xs-center">
+            <button class="rounded-btn">Contact Me</button>
+        </div>
+    </div>
+</div>

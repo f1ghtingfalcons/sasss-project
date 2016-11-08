@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "pallete"
-@import "../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss"
-@import "../node_modules/bulma/bulma.sass"
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css)
+
+$enable-flex: true
 
 @font-face 
     font-family: 'Modeka'
@@ -22,11 +22,32 @@ body
     max-width: 100%
     max-height: 100%
 
-h1, h2, h3
+h1, h2, h3, h4
     font-family: 'Ailerons','Modeka', 'Roboto Slab', "Helvetica Neue"
 
-h2
-    font-size: 2.2em
+.rounded-btn
+    display: inline-block
+    padding: 0 2.5em
+    line-height: 2.85em
+    margin: 0
+    border: 0
+    background: #000
+    border: solid 2px #000
+    -moz-border-radius: 100px
+    border-radius: 100px
+    transition: all .3s
+    -moz-transition: all .3s
+    -webkit-transition: all .3s
+    -o-transition: all .3s
+    color: #fff
+    outline: 0
+    cursor: pointer
+    text-align: center
+    text-decoration: none
+    font-size: 1em
+    vertical-align: middle
+    border-collapse: separate
+    overflow: visible
 
-p
-    font-size: 1.2em
+.padding
+    padding: 32px
