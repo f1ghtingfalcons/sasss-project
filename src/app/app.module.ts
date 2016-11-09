@@ -13,7 +13,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { MainComponent } from './main/main.component';
 import { SkillCardComponent } from './main/skill-card/skill-card.component';
 import { SkrollDirective } from './shared/skroll.directive';
-import { FooterComponent } from './footer/footer.component';
+import { ProjectCardComponent } from './projects-list/project-card/project-card.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -34,7 +34,7 @@ const routes: Routes = [
     MainComponent,
     SkillCardComponent,
     SkrollDirective,
-    FooterComponent
+    ProjectCardComponent
   ],
   imports: [
     NgbModule.forRoot(),

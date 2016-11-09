@@ -1,0 +1,7 @@
+<div class="card" [@cardStateWidth]="cardStateWidth" [@cardStateHeight]="cardStateHeight" (click)="toggleState()">
+    <div class="card-image" [@imageState]="imageState" [style.background-image]="images[0]"></div>
+    <div class="card-text" [@textState]="textState">
+        <h4>UAV Tracking for Laser Spectroscopy</h4>
+        <p>High accuracy (+/- 2mm) tracking of a quadcopter drone.</p>
+    </div>
+</div>
