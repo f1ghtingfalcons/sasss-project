@@ -1,5 +1,6 @@
 <img class="card-img-top" src="{{image}}">
 <div class="card-block">
-    <h4 class="underline">{{title}}</h4>
+    <h4>{{title}}<div class="underline" [style.background]="color"></div></h4>
     <p class="card-text">{{description}}</p>
 </div>
+<button md-ripple class="discover-btn rounded-btn"  [style.background-color]="color">Discover</button>

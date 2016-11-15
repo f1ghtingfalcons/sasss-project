@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   imports: [
     NgbModule.forRoot(),
     RouterModule.forRoot(routes),
+    MaterialModule.forRoot(),
     BrowserModule,
     HttpModule
   ],

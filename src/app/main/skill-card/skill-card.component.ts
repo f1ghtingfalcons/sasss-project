@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class SkillCardComponent {
     @Input() image: string;
     @Input() title: string;
-    @Input() description: string;    
+    @Input() description: string;
+    @Input() color: string;
 }

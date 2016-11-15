@@ -1,13 +1,10 @@
 <div class="container padding">
-    <div class="row flex-items-xs-center">
-        <app-skill-card class="card col-sm-6 text-xs-center" *ngFor="let skill of skills" [image]="skill.image" [title]="skill.title" [description]="skill.description"></app-skill-card>
+    <div class="about">
+        <h2>About Me</h2>
+        <p>I am an engineer and a designer from Colorado. I seek to use technology to design solutions to complex problems. I have worked on problems from optics to unmaned aerial systems to prototype consumer products. I have also worked as a software engineer designing data transformation and harvesting systems, ontologies, and even websites.</p>
+        <button class="rounded-btn">MORE</button>
     </div>
     <div class="row flex-items-xs-center">
-        <div class="col-xs-4 text-xs-center">
-            <button class="rounded-btn">See My Projects</button>
-        </div>
-        <div class="col-xs-4 text-xs-center">
-            <button class="rounded-btn">Contact Me</button>
-        </div>
+        <app-skill-card class="card col-md-6 text-xs-center" *ngFor="let skill of skills" [image]="skill.image" [title]="skill.title" [description]="skill.description" [color]="skill.color"></app-skill-card>
     </div>
 </div>
