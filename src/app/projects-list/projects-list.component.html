@@ -1,3 +1,7 @@
-<div class="project-list container">
-    <app-project-card *ngFor="let project of projectList" [name]="project.name" [short]="project.short" [long]="project.long" [images]="project.images"></app-project-card>
+<div class="project-list container padding">
+    <div class="row">
+        <div *ngFor="let project of projectList" class="col-sm-4" [@cardStateWidth]="project.cardStateWidth">
+            <app-project-card [(cardStateWidth)]="project.cardStateWidth" [name]="project.name" [short]="project.short" [long]="project.long" [images]="project.images"></app-project-card>
+        </div>
+    </div>
 </div> 

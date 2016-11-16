@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-page.component.sass']
 })
 export class AboutPageComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit() {
+     const url = 'https://platform.linkedin.com/badges/js/profile.js';
+     let node = document.createElement('script');
+     node.src = url;
+     node.type = 'text/javascript';
+     node.async = true;
+     node.charset = 'utf-8';
+     document.getElementsByTagName('head')[0].appendChild(node);
   }
 
 }
