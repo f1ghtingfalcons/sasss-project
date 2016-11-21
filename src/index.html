@@ -5,10 +5,20 @@
   <title>Tyler Traver - Design * Engineering * Physics</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/please-wait/please-wait.css" rel="stylesheet">
+  <link href="assets/please-wait/spin-kit.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  <script type="text/javascript" src="assets/please-wait/please-wait.min.js"></script>
+  <script type="text/javascript">
+      window.loading_screen = window.pleaseWait({
+        logo: "",
+        backgroundColor: '#0288d1',
+        loadingHtml: "<li class='sk-folding-cube selected' style='color:#0288d1'><div class='sk-cube1 sk-cube'></div><div class='sk-cube2 sk-cube'></div><div class='sk-cube4 sk-cube'></div><div class='sk-cube3 sk-cube'></div></li>"
+      });
+    </script>
+  <app-root></app-root>
 </body>
 </html>
