@@ -4,11 +4,13 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
+    "start": "http-server",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build && mv dist/* ."
   },
   "private": true,
   "dependencies": {
@@ -27,9 +29,7 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.2",
-    "zone.js": "^0.6.26"
-  },
-  "devDependencies": {
+    "zone.js": "^0.6.26",
     "@types/jasmine": "^2.2.38",
     "angular-cli": "1.0.0-beta.20-4",
     "codelyzer": "~1.0.0-beta.3",
@@ -44,5 +44,7 @@
     "ts-node": "^1.7.0",
     "tslint": "^3.15.0",
     "typescript": "2.0.10"
+  },
+  "devDependencies": {
   }
 }

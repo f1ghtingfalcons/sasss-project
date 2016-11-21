@@ -1,4 +1,9 @@
 <div class="project-list container padding">
+    <div class="about">
+        <h2 class="container center">Projects</h2>
+        <p>Below is a mixture of my professional, personal, and academic projects.</p>
+        <p>(Click on an image to see more details)</p>
+    </div>
     <div class="row">
         <div *ngFor="let project of projectList" class="col-sm-4" [@cardStateWidth]="project.cardStateWidth">
             <app-project-card [(cardStateWidth)]="project.cardStateWidth" [name]="project.name" [short]="project.short" [long]="project.long" [images]="project.images"></app-project-card>
