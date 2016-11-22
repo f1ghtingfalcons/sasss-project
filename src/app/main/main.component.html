@@ -2,7 +2,7 @@
     <div class="about">
         <h2>About Me</h2>
         <p>I am an engineer and a designer from Colorado. I seek to use technology to design solutions to complex problems. I have worked on problems from optics to unmaned aerial systems to prototype consumer products. I have also worked as a software engineer designing data transformation and harvesting systems, ontologies, and websites.</p>
-        <button class="rounded-btn">MORE</button>
+        <a href="/#/about"><button class="rounded-btn">MORE</button></a>
     </div>
     <div class="row flex-items-xs-center">
         <app-skill-card class="card col-md-6 text-xs-center" *ngFor="let skill of skills" [image]="skill.image" [title]="skill.title" [description]="skill.description" [color]="skill.color"></app-skill-card>
