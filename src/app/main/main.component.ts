@@ -10,7 +10,7 @@ export class MainComponent {
       title: 'Design & Engineering',
       color: '#4CAF50',
       image: 'assets/icons/compass.svg',
-      description: 'The simplest solution is ussually the correct one when its done right. This rapid prototyping, gathering customer feedback, and designing and running tests to validate design choices. I have used my knowledge and experience in engineering and scientific disciplines to create novel designs including the design of an electronic guitar amplifier, optical cavity, remote control car, drone tracking device, wireless camera and more.'
+      description: 'The simplest solution is ussually the correct one when its done right. This rapid prototyping, gathering customer feedback, and designing and running tests to validate design choices. I have used my knowledge and experience in engineering and scientific disciplines to create novel designs including the design of an electronic guitar amplifier, optical resonator cavity, remote control car, drone tracking device, wireless camera and more.'
     },{
       title: 'Software Development',
       color: '#FF9800',

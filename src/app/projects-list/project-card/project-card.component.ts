@@ -46,7 +46,7 @@ import { Component,
 export class ProjectCardComponent {
     @Input() name : string;
     @Input() short : string;
-    @Input() long : string;
+    @Input() long : string[];
     @Input() images : string[];
     @Input() cardStateWidth : string;
     @Output() cardStateWidthChange = new EventEmitter<string>(); 

@@ -3,5 +3,6 @@
     <div class="card-text" [@textState]="textState">
         <h4>{{name}}</h4>
         <p>{{short}}</p>
+        <p *ngFor="let p of long">{{p}}</p>
     </div>
 </div>
